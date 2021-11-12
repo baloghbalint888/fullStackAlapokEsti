@@ -21,3 +21,5 @@ async function listAndRenderColors() {
 /*
 async / await -> colorsra hivatkozunk 
 */
+
+//hf json-ből infokat kell kiszedni, két értéket tárolunk, sárga vagy görögdinnye, és tömege
