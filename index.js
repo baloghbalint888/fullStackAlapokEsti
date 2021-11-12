@@ -25,7 +25,14 @@ const server = http.createServer((req,res) =>{
         break;
         case req.url ==="/favicon.ico" && req.method ==="GET":
             fs.readFile('./views/favicon.ico',(err,data)=>{
-                res.setHeader('Content-Type', 'image/x-icon');
+                res.setHeader('Content-Type', 'image/ico');
+                res.writeHead(200);
+                res.end(data);
+            })
+        break;
+        case req.url ==="/colors" && req.method==="GET":
+            fs.readFile("./datas/colors.json",(err,data)=>{
+                res.setHeader('Content-Type', 'applicaton/json');
                 res.writeHead(200);
                 res.end(data);
             })
